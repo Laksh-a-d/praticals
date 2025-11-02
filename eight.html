@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Magazine</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, footer { background: #333; color: white; text-align: center; padding: 1em; }
+    .container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 20px;
+    }
+    .article {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    img { width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <header><h1>Online Magazine</h1></header>
+
+  <div class="container">
+    <div class="article">
+      <img src="https://via.placeholder.com/300x150" alt="Article 1">
+      <h3>Article Title 1</h3>
+      <p>Short summary of the article goes here.</p>
+    </div>
+    <div class="article">
+      <img src="https://via.placeholder.com/300x150" alt="Article 2">
+      <h3>Article Title 2</h3>
+      <p>Short summary of the article goes here.</p>
+    </div>
+    <div class="article">
+      <img src="https://via.placeholder.com/300x150" alt="Article 3">
+      <h3>Article Title 3</h3>
+      <p>Short summary of the article goes here.</p>
+    </div>
+  </div>
+
+  <footer><p>&copy; 2025 Online Magazine</p></footer>
+
+</body>
+</html>
