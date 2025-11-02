@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Clothing Store</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Clothify</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="container text-center mt-4">
+    <h2>🛍️ Welcome to Clothify</h2>
+    <p class="text-muted">Discover the latest fashion trends at affordable prices!</p>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container mt-4">
+    <div class="row g-4">
+      
+      <!-- Product 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <h5 class="card-title">Casual T-Shirt</h5>
+            <p class="card-text">Comfortable cotton T-shirt perfect for everyday wear.</p>
+            <p><strong>₹499</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="card-img-top" alt="Jeans">
+          <div class="card-body">
+            <h5 class="card-title">Blue Denim Jeans</h5>
+            <p class="card-text">Classic slim-fit jeans made with stretchable fabric.</p>
+            <p><strong>₹999</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1520975918318-7da4cdddf5dc" class="card-img-top" alt="Dress">
+          <div class="card-body">
+            <h5 class="card-title">Floral Dress</h5>
+            <p class="card-text">Stylish floral dress suitable for casual and formal occasions.</p>
+            <p><strong>₹1,299</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" class="card-img-top" alt="Jacket">
+          <div class="card-body">
+            <h5 class="card-title">Leather Jacket</h5>
+            <p class="card-text">Premium leather jacket for a bold, stylish look.</p>
+            <p><strong>₹2,499</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" class="card-img-top" alt="Shoes">
+          <div class="card-body">
+            <h5 class="card-title">Sneakers</h5>
+            <p class="card-text">Trendy sneakers offering comfort and performance.</p>
+            <p><strong>₹1,899</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1618354696793-2c86a4e73a1b" class="card-img-top" alt="Watch">
+          <div class="card-body">
+            <h5 class="card-title">Analog Watch</h5>
+            <p class="card-text">Elegant wristwatch with leather strap for all occasions.</p>
+            <p><strong>₹2,099</strong></p>
+            <button class="btn btn-primary w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Clothify | Designed with ❤️ using Bootstrap</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

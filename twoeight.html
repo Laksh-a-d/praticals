@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Subscription Popup</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Content -->
+  <div class="container text-center mt-5">
+    <h1>Welcome to My Blog</h1>
+    <p>Stay updated with the latest articles and tutorials.</p>
+  </div>
+
+  <!-- Subscription Modal -->
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="subscribeModalLabel">Subscribe to Our Newsletter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Get the latest updates straight to your inbox!</p>
+          <form id="subscribeForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Subscribe</button>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <small class="text-muted">We respect your privacy. Unsubscribe anytime.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for auto-popup -->
+  <script>
+    // Show the modal 2 seconds after page load
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const myModal = new bootstrap.Modal(document.getElementById("subscribeModal"));
+        myModal.show();
+      }, 2000);
+    });
+
+    // Handle form submission
+    document.getElementById("subscribeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for subscribing, " + document.getElementById("name").value + "!");
+      const modalElement = document.getElementById("subscribeModal");
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      modal.hide();
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

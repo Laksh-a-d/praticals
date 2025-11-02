@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothing Store Menu</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      color: white;
+      background-color: inherit;
+      padding: 14px 20px;
+      font-size: 16px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Submenu styling */
+    .submenu {
+      position: relative;
+    }
+
+    .submenu-content {
+      display: none;
+      position: absolute;
+      left: 180px;
+      top: 0;
+      background-color: #f9f9f9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .submenu-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Show submenu on hover */
+    .submenu:hover .submenu-content {
+      display: block;
+    }
+
+    /* Page header */
+    header {
+      text-align: center;
+      padding: 40px;
+      background-color: #e3f2fd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Trendy Threads Clothing Store</h1>
+    <p>Explore the latest fashion for everyone!</p>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Women ▼</button>
+      <div class="dropdown-content">
+        <a href="#">Dresses</a>
+        <a href="#">Tops</a>
+        <div class="submenu">
+          <a href="#">Shoes ▶</a>
+          <div class="submenu-content">
+            <a href="#">Heels</a>
+            <a href="#">Flats</a>
+            <a href="#">Boots</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Men ▼</button>
+      <div class="dropdown-content">
+        <a href="#">Shirts</a>
+        <a href="#">Pants</a>
+        <a href="#">Jackets</a>
+      </div>
+    </div>
+
+    <a href="#">Kids</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- JavaScript for click toggle (optional for mobile) -->
+  <script>
+    const dropdowns = document.querySelectorAll(".dropbtn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
